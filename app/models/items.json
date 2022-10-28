@@ -1,0 +1,206 @@
+[
+    {
+        "name": "罐罐",
+        "item_type": "food",
+        "price": 0,
+        "like": true
+    },
+    {
+        "name": "雞胸肉",
+        "item_type": "food",
+        "price": 0,
+        "like": true
+    },
+    {
+        "name": "雞排",
+        "item_type": "food",
+        "price": 0,
+        "like": true
+    },
+    {
+        "name": "泥土",
+        "item_type": "food",
+        "price": 0,
+        "like": false
+    },
+    {
+        "name": "雞骨頭",
+        "item_type": "food",
+        "price": 0,
+        "like": false
+    },
+    {
+        "name": "香菜",
+        "item_type": "food",
+        "price": 0,
+        "like": false
+    },
+    {
+        "name": "蒜頭",
+        "item_type": "food",
+        "price": 0,
+        "like": false
+    },
+    {
+        "name": "芥菜",
+        "item_type": "food",
+        "price": 0,
+        "like": false
+    },
+    {
+        "name": "貓草",
+        "item_type": "food",
+        "price": 0,
+        "like": null
+    },
+    {
+        "name": "花椰菜",
+        "item_type": "food",
+        "price": 0,
+        "like": null
+    },
+    {
+        "name": "木瓜",
+        "item_type": "food",
+        "price": 0,
+        "like": null
+    },
+    {
+        "name": "胡蘿蔔",
+        "item_type": "food",
+        "price": 0,
+        "like": null
+    },
+    {
+        "name": "葡萄",
+        "item_type": "food",
+        "price": 0,
+        "like": null
+    },
+    {
+        "name": "洋蔥",
+        "item_type": "food",
+        "price": 0,
+        "like": null
+    },
+    {
+        "name": "酪梨",
+        "item_type": "food",
+        "price": 0,
+        "like": null
+    },
+    {
+        "name": "巧克力",
+        "item_type": "food",
+        "price": 0,
+        "like": null
+    },
+    {
+        "name": "啤酒",
+        "item_type": "food",
+        "price": 0,
+        "like": null
+    },
+    {
+        "name": "威士忌",
+        "item_type": "food",
+        "price": 0,
+        "like": null
+    },
+    {
+        "name": "讓牠蹭",
+        "item_type": "toy",
+        "price": 0,
+        "like": true
+    },
+    {
+        "name": "不理牠",
+        "item_type": "toy",
+        "price": 0,
+        "like": true
+    },
+    {
+        "name": "武松打貓",
+        "item_type": "toy",
+        "price": 0,
+        "like": false
+    },
+    {
+        "name": "抱抱",
+        "item_type": "toy",
+        "price": 0,
+        "like": false
+    },
+    {
+        "name": "囚禁",
+        "item_type": "toy",
+        "price": 0,
+        "like": false
+    },
+    {
+        "name": "洗澡",
+        "item_type": "toy",
+        "price": 0,
+        "like": null
+    },
+    {
+        "name": "出門散步",
+        "item_type": "toy",
+        "price": 0,
+        "like": null
+    },
+    {
+        "name": "摸摸",
+        "item_type": "toy",
+        "price": 0,
+        "like": null
+    },
+    {
+        "name": "貓抓板",
+        "item_type": "toy",
+        "price": 0,
+        "like": null
+    },
+    {
+        "name": "塑膠袋",
+        "item_type": "toy",
+        "price": 0,
+        "like": null
+    },
+    {
+        "name": "紙箱",
+        "item_type": "toy",
+        "price": 0,
+        "like": null
+    },
+    {
+        "name": "逗貓棒",
+        "item_type": "toy",
+        "price": 0,
+        "like": null
+    },
+    {
+        "name": "電動蟑螂",
+        "item_type": "toy",
+        "price": 0,
+        "like": null
+    },
+    {
+        "name": "雷射筆",
+        "item_type": "toy",
+        "price": 0,
+        "like": null
+    },
+    {
+        "name": "貓跳台",
+        "item_type": "toy",
+        "price": 0,
+        "like": null
+    },
+    {
+        "name": "電動塑膠懶人玩具",
+        "item_type": "toy",
+        "price": 0,
+        "like": null
+    }
+]
