@@ -2,205 +2,715 @@
     {
         "name": "罐罐",
         "item_type": "food",
-        "price": 0,
-        "like": true
+        "introduction": "萬用罐罐，基本上所有貓貓都愛",
+        "price": 10,
+        "like": true,
+        "effect": {
+            "like": {
+                "healthiness": 1,
+                "trustiness": 2,
+                "saturation": 5,
+                "score": 10
+            },
+            "dont-like": {
+                "healthiness": -1,
+                "trustiness": -2,
+                "saturation": 5,
+                "score": 3
+            }
+        }
     },
     {
         "name": "雞胸肉",
         "item_type": "food",
+        "introduction": "好吃的雞胸肉，基本上所有貓貓都愛",
         "price": 0,
-        "like": true
+        "like": true,
+        "effect": {
+            "like": {
+                "healthiness": 3,
+                "trustiness": 1,
+                "saturation": 5,
+                "score": 10
+            },
+            "dont-like": {
+                "healthiness": 3,
+                "trustiness": -1,
+                "saturation": 5,
+                "score": 5
+            }
+        }
     },
     {
         "name": "雞排",
         "item_type": "food",
+        "introduction": "台灣經典美食，雖然對貓非常鹹，吃多會死，但是太好吃了，給我來一打",
         "price": 0,
-        "like": true
+        "like": true,
+        "effect": {
+            "like": {
+                "healthiness": -3,
+                "trustiness": 5,
+                "saturation": 10,
+                "score": 10
+            },
+            "dont-like": {
+                "healthiness": -3,
+                "trustiness": -5,
+                "saturation": 10,
+                "score": 5
+            }
+        }
     },
     {
         "name": "泥土",
         "item_type": "food",
+        "introduction": "月光族的月底救星，可以填飽肚子，但你敢餵主子吃土？",
         "price": 0,
-        "like": false
+        "like": false,
+        "effect": {
+            "like": {
+                "healthiness": -2,
+                "trustiness": 2,
+                "saturation": 5,
+                "score": 3
+            },
+            "dont-like": {
+                "healthiness": -2,
+                "trustiness": -5,
+                "saturation": 5,
+                "score": 1
+            }
+        }
     },
     {
         "name": "雞骨頭",
         "item_type": "food",
+        "introduction": "吃剩的食物，聽說卡比獸會有機率攜帶",
         "price": 0,
-        "like": false
+        "like": false,
+        "effect": {
+            "like": {
+                "healthiness": -1,
+                "trustiness": 1,
+                "saturation": 2,
+                "score": 3
+            },
+            "dont-like": {
+                "healthiness": -1,
+                "trustiness": -2,
+                "saturation": 2,
+                "score": 1
+            }
+        }
     },
     {
         "name": "香菜",
         "item_type": "food",
+        "introduction": "開發者很喜歡香菜，但聽說很多人討厭香菜，不過為了讓大眾有共鳴還是擺了上來",
         "price": 0,
-        "like": false
+        "like": false,
+        "effect": {
+            "like": {
+                "healthiness": 1,
+                "trustiness": 1,
+                "saturation": 1,
+                "score": 1
+            },
+            "dont-like": {
+                "healthiness": -50,
+                "trustiness": -50,
+                "saturation": 1,
+                "score": -10
+            }
+        }
     },
     {
         "name": "蒜頭",
         "item_type": "food",
+        "introduction": "恐怖的東西，最好別餵給你主子吃",
         "price": 0,
-        "like": false
+        "like": false,
+        "effect": {
+            "like": {
+                "healthiness": 1,
+                "trustiness": 1,
+                "saturation": 1,
+                "score": 1
+            },
+            "dont-like": {
+                "healthiness": -30,
+                "trustiness": -30,
+                "saturation": 1,
+                "score": -5
+            }
+        }
     },
     {
         "name": "芥菜",
         "item_type": "food",
+        "introduction": "恐怖的東西，最好別餵給你主子吃",
         "price": 0,
-        "like": false
+        "like": false,
+        "effect": {
+            "like": {
+                "healthiness": 1,
+                "trustiness": 1,
+                "saturation": 1,
+                "score": 1
+            },
+            "dont-like": {
+                "healthiness": -30,
+                "trustiness": -30,
+                "saturation": 1,
+                "score": -5
+            }
+        }
     },
     {
         "name": "貓草",
         "item_type": "food",
+        "introduction": "有一種草味，有些貓喜歡 有些貓不喜歡",
         "price": 0,
-        "like": null
+        "like": null,
+        "effect": {
+            "like": {
+                "healthiness": 3,
+                "trustiness": 5,
+                "saturation": 1,
+                "score": 10
+            },
+            "dont-like": {
+                "healthiness": 3,
+                "trustiness": -5,
+                "saturation": 1,
+                "score": 3
+            }
+        }
     },
     {
         "name": "花椰菜",
         "item_type": "food",
+        "introduction": "富含膳食纖維，但不一定喜歡",
         "price": 0,
-        "like": null
+        "like": null,
+        "effect": {
+            "like": {
+                "healthiness": 5,
+                "trustiness": 3,
+                "saturation": 5,
+                "score": 20
+            },
+            "dont-like": {
+                "healthiness": 5,
+                "trustiness": -3,
+                "saturation": 5,
+                "score": 8
+            }
+        }
     },
     {
         "name": "木瓜",
         "item_type": "food",
+        "introduction": "中間有好多珍珠，要是有奶茶就好了",
         "price": 0,
-        "like": null
+        "like": null,
+        "effect": {
+            "like": {
+                "healthiness": 5,
+                "trustiness": 5,
+                "saturation": 5,
+                "score": 25
+            },
+            "dont-like": {
+                "healthiness": 5,
+                "trustiness": -5,
+                "saturation": 5,
+                "score": 12
+            }
+        }
     },
     {
         "name": "胡蘿蔔",
         "item_type": "food",
+        "introduction": "富含β-胡蘿蔔素，打成果汁可以偽裝成木瓜牛奶",
         "price": 0,
-        "like": null
+        "like": null,
+        "effect": {
+            "like": {
+                "healthiness": 3,
+                "trustiness": 3,
+                "saturation": 3,
+                "score": 15
+            },
+            "dont-like": {
+                "healthiness": 3,
+                "trustiness": -3,
+                "saturation": 3,
+                "score": 5
+            }
+        }
     },
     {
         "name": "葡萄",
         "item_type": "food",
+        "introduction": "吃葡萄不吐葡萄籽，不吃葡萄倒吐葡萄籽",
         "price": 0,
-        "like": null
+        "like": null,
+        "effect": {
+            "like": {
+                "healthiness": -5,
+                "trustiness": 1,
+                "saturation": 1,
+                "score": 5
+            },
+            "dont-like": {
+                "healthiness": -5,
+                "trustiness": -5,
+                "saturation": 1,
+                "score": 0
+            }
+        }
     },
     {
         "name": "洋蔥",
         "item_type": "food",
+        "introduction": "要好好洗頭洗衣服，不然會有Larry味",
         "price": 0,
-        "like": null
+        "like": null,
+        "effect": {
+            "like": {
+                "healthiness": -5,
+                "trustiness": 1,
+                "saturation": 2,
+                "score": 5
+            },
+            "dont-like": {
+                "healthiness": -5,
+                "trustiness": -5,
+                "saturation": 2,
+                "score": -1
+            }
+        }
     },
     {
         "name": "酪梨",
         "item_type": "food",
+        "introduction": "山姆老弟的媽媽打的酪梨牛奶是最好喝的飲料",
         "price": 0,
-        "like": null
+        "like": null,
+        "effect": {
+            "like": {
+                "healthiness": -5,
+                "trustiness": 1,
+                "saturation": 3,
+                "score": 2
+            },
+            "dont-like": {
+                "healthiness": -5,
+                "trustiness": -5,
+                "saturation": 3,
+                "score": -1
+            }
+        }
     },
     {
         "name": "巧克力",
         "item_type": "food",
+        "introduction": "好吃一直吃，但貓能吃這東東嗎？",
         "price": 0,
-        "like": null
+        "like": null,
+        "effect": {
+            "like": {
+                "healthiness": -10,
+                "trustiness": 10,
+                "saturation": 1,
+                "score": 2
+            },
+            "dont-like": {
+                "healthiness": -10,
+                "trustiness": -10,
+                "saturation": 1,
+                "score": -5
+            }
+        }
     },
     {
         "name": "啤酒",
         "item_type": "food",
+        "introduction": "給開司一罐啤酒，再給綺夢一杯嘎逼，給我一杯檸檬汁",
         "price": 0,
-        "like": null
+        "like": null,
+        "effect": {
+            "like": {
+                "healthiness": -20,
+                "trustiness": -20,
+                "saturation": 2,
+                "score": 0
+            },
+            "dont-like": {
+                "healthiness": -20,
+                "trustiness": -20,
+                "saturation": 2,
+                "score": -10
+            }
+        }
     },
     {
         "name": "威士忌",
         "item_type": "food",
+        "introduction": "未成年請勿飲酒，飲酒後請勿開車",
         "price": 0,
-        "like": null
+        "like": null,
+        "effect": {
+            "like": {
+                "healthiness": -50,
+                "trustiness": 50,
+                "saturation": 2,
+                "score": 10
+            },
+            "dont-like": {
+                "healthiness": -50,
+                "trustiness": -50,
+                "saturation": 2,
+                "score": -50
+            }
+        }
     },
     {
         "name": "讓牠蹭",
         "item_type": "toy",
+        "introduction": "蹭蹭是貓的肢體語言，用於表達愛，順便留下自己的味道，宣示這位奴才是老子的",
         "price": 0,
-        "like": true
+        "like": true,
+        "effect": {
+            "like": {
+                "healthiness": 0,
+                "trustiness": 1,
+                "saturation": 0,
+                "score": 2
+            },
+            "dont-like": {
+                "healthiness": 0,
+                "trustiness": -1,
+                "saturation": 0,
+                "score": 1
+            }
+        }
     },
     {
         "name": "不理牠",
         "item_type": "toy",
+        "introduction": "顧名思義，Let it go",
         "price": 0,
-        "like": true
+        "like": true,
+        "effect": {
+            "like": {
+                "healthiness": 0,
+                "trustiness": 2,
+                "saturation": 0,
+                "score": 3
+            },
+            "dont-like": {
+                "healthiness": 0,
+                "trustiness": -2,
+                "saturation": 0,
+                "score": 1
+            }
+        }
     },
     {
-        "name": "武松打貓",
+        "name": "打貓",
         "item_type": "toy",
+        "introduction": "不是民雄的那個打貓，是真正的虐貓",
         "price": 0,
-        "like": false
+        "like": false,
+        "effect": {
+            "like": {
+                "healthiness": 0,
+                "trustiness": 10,
+                "saturation": 0,
+                "score": 3
+            },
+            "dont-like": {
+                "healthiness": 0,
+                "trustiness": -10,
+                "saturation": 0,
+                "score": -10
+            }
+        }
     },
     {
         "name": "抱抱",
         "item_type": "toy",
+        "introduction": "用手將貓貓托起，並摟在胸口",
         "price": 0,
-        "like": false
+        "like": false,
+        "effect": {
+            "like": {
+                "healthiness": 0,
+                "trustiness": 2,
+                "saturation": 0,
+                "score": 4
+            },
+            "dont-like": {
+                "healthiness": 0,
+                "trustiness": -2,
+                "saturation": 0,
+                "score": -2
+            }
+        }
     },
     {
         "name": "囚禁",
         "item_type": "toy",
+        "introduction": "如果是M屬性，應該會喜歡...吧？",
         "price": 0,
-        "like": false
+        "like": false,
+        "effect": {
+            "like": {
+                "healthiness": 0,
+                "trustiness": 2,
+                "saturation": 0,
+                "score": 4
+            },
+            "dont-like": {
+                "healthiness": 0,
+                "trustiness": -20,
+                "saturation": 0,
+                "score": -20
+            }
+        }
     },
     {
         "name": "洗澡",
         "item_type": "toy",
+        "introduction": "幫主子洗香香，但貓貓會喜歡嗎？",
         "price": 0,
-        "like": null
+        "like": null,
+        "effect": {
+            "like": {
+                "healthiness": 0,
+                "trustiness": 5,
+                "saturation": 0,
+                "score": 10
+            },
+            "dont-like": {
+                "healthiness": 0,
+                "trustiness": -5,
+                "saturation": 0,
+                "score": -10
+            }
+        }
     },
     {
         "name": "出門散步",
         "item_type": "toy",
+        "introduction": "放在肩膀上遛貓",
         "price": 0,
-        "like": null
+        "like": null,
+        "effect": {
+            "like": {
+                "healthiness": 0,
+                "trustiness": 3,
+                "saturation": -1,
+                "score": 6
+            },
+            "dont-like": {
+                "healthiness": 0,
+                "trustiness": -3,
+                "saturation": -1,
+                "score": -6
+            }
+        }
     },
     {
         "name": "摸摸",
         "item_type": "toy",
+        "introduction": "就是摸摸，沒別的意思",
         "price": 0,
-        "like": null
+        "like": null,
+        "effect": {
+            "like": {
+                "healthiness": 0,
+                "trustiness": 2,
+                "saturation": 0,
+                "score": 4
+            },
+            "dont-like": {
+                "healthiness": 0,
+                "trustiness": -2,
+                "saturation": 0,
+                "score": -4
+            }
+        }
     },
     {
         "name": "貓抓板",
         "item_type": "toy",
+        "introduction": "經典貓咪玩具",
         "price": 0,
-        "like": null
+        "like": null,
+        "effect": {
+            "like": {
+                "healthiness": 0,
+                "trustiness": 3,
+                "saturation": -3,
+                "score": 6
+            },
+            "dont-like": {
+                "healthiness": 0,
+                "trustiness": -3,
+                "saturation": -1,
+                "score": -1
+            }
+        }
     },
     {
         "name": "塑膠袋",
         "item_type": "toy",
+        "introduction": "堪稱史上成本最低的貓玩具",
         "price": 0,
-        "like": null
+        "like": null,
+        "effect": {
+            "like": {
+                "healthiness": 0,
+                "trustiness": 2,
+                "saturation": -5,
+                "score": 4
+            },
+            "dont-like": {
+                "healthiness": 0,
+                "trustiness": -2,
+                "saturation": -3,
+                "score": -1
+            }
+        }
     },
     {
         "name": "紙箱",
         "item_type": "toy",
+        "introduction": "聽說只要一放在地上，主子就會自動進駐了，而且越小越好",
         "price": 0,
-        "like": null
+        "like": null,
+        "effect": {
+            "like": {
+                "healthiness": 0,
+                "trustiness": 5,
+                "saturation": -3,
+                "score": 10
+            },
+            "dont-like": {
+                "healthiness": 0,
+                "trustiness": -5,
+                "saturation": -1,
+                "score": -3
+            }
+        }
     },
     {
         "name": "逗貓棒",
         "item_type": "toy",
+        "introduction": "通常玩沒幾天就壞了",
         "price": 0,
-        "like": null
+        "like": null,
+        "effect": {
+            "like": {
+                "healthiness": 0,
+                "trustiness": 10,
+                "saturation": -5,
+                "score": 20
+            },
+            "dont-like": {
+                "healthiness": 0,
+                "trustiness": -3,
+                "saturation": -2,
+                "score": -2
+            }
+        }
     },
     {
         "name": "電動蟑螂",
         "item_type": "toy",
+        "introduction": "會震動的逗貓玩具，讓奴才們可以稍微休息一會兒",
         "price": 0,
-        "like": null
+        "like": null,
+        "effect": {
+            "like": {
+                "healthiness": 0,
+                "trustiness": 10,
+                "saturation": -5,
+                "score": 20
+            },
+            "dont-like": {
+                "healthiness": 0,
+                "trustiness": -3,
+                "saturation": -2,
+                "score": -2
+            }
+        }
     },
     {
         "name": "雷射筆",
         "item_type": "toy",
+        "introduction": "小心不要照到眼睛了",
         "price": 0,
-        "like": null
+        "like": null,
+        "effect": {
+            "like": {
+                "healthiness": 0,
+                "trustiness": 10,
+                "saturation": -5,
+                "score": 20
+            },
+            "dont-like": {
+                "healthiness": 0,
+                "trustiness": -3,
+                "saturation": -2,
+                "score": -2
+            }
+        }
     },
     {
         "name": "貓跳台",
         "item_type": "toy",
+        "introduction": "讓主子站在制高點俯視自己，我辛苦工作就是為了這個！",
         "price": 0,
-        "like": null
+        "like": null,
+        "effect": {
+            "like": {
+                "healthiness": 0,
+                "trustiness": 20,
+                "saturation": -5,
+                "score": 40
+            },
+            "dont-like": {
+                "healthiness": 0,
+                "trustiness": -5,
+                "saturation": -2,
+                "score": -3
+            }
+        }
     },
     {
         "name": "電動塑膠懶人玩具",
         "item_type": "toy",
+        "introduction": "高級版奴才救星，主子不玩的時候，奴才也可以自己玩",
         "price": 0,
-        "like": null
+        "like": null,
+        "effect": {
+            "like": {
+                "healthiness": 0,
+                "trustiness": 25,
+                "saturation": -5,
+                "score": 20
+            },
+            "dont-like": {
+                "healthiness": 0,
+                "trustiness": -5,
+                "saturation": -2,
+                "score": -5
+            }
+        }
     }
 ]
