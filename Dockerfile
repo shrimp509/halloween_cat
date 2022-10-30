@@ -10,9 +10,11 @@ RUN apk update && apk add git make gcc g++ libc-dev pkgconfig build-base \
 # Set an environment variable to store where the app is installed to inside
 # of the Docker image.
 ARG RAILS_ENV=development
+ARG RAILS_MASTER_KEY=key
 ENV RAILS_ENV $RAILS_ENV
 ENV DATABASE_HOST postgres
 ENV REDIS_HOST redis
+ENV RAILS_MASTER_KEY $RAILS_MASTER_KEY
 
 # Set current workdir
 WORKDIR /halloween-cat
