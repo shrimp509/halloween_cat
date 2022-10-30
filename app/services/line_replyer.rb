@@ -60,6 +60,7 @@ class LineReplyer
         12. /rename: 替主子取名字
         '''.strip.gsub("        ", '')
       when 'stat'
+        status = @cat.alive? ? '還活著' : '離家出走了'
         healthiness = if @cat.healthiness > 0 && @cat.healthiness <= 20
                         '快死了'
                       elsif @cat.healthiness > 20 && @cat.healthiness <= 50
@@ -86,11 +87,12 @@ class LineReplyer
                         '我好飽，朕要先去休息了'
                       end
         """
-        ♥️ 狀態：#{@cat.name} #{healthiness}，#{trustiness}，#{saturation}
+        ♥️ 狀態：#{@cat.name} #{status}，#{healthiness}，#{trustiness}，#{saturation}
         💰 錢錢：#{@room.money}
         📈 總分：#{@room.score}
         """.strip.gsub("        ", '')
       when 'feed'
+        return "#{@cat.name} 已受不了而離家出走，在你的世界裡消失，考慮 /restart 重養一隻？" if @cat.leave?
         return "沒有這種東西哦，你是不是想壞壞 -`д´-" unless @room.items.pluck(:name).include?(option)
         @item = @room.items.find_by(name: option)
         return "這東西不能吃... 可憐的人類(´･_･`)" unless @item.item_type == 'food'
@@ -153,6 +155,7 @@ class LineReplyer
           "*倉庫庫存* :\n" + items.join("\n")
         end
       when 'rename'
+        return "#{@cat.name} 已受不了而離家出走，在你的世界裡消失，考慮 /restart 重養一隻？" if @cat.leave?
         name_pattern = /\A(.{1,50})\z/
         return "*#{@cat.name}* : 你真的有想要給我取名字嗎 ...?\n" + "(系統溫馨提醒: `/rename 要改的名字` )" if option.nil? || option.blank?
         result = @cat.update(name: option) if option.match?(name_pattern)

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_28_020402) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_30_015706) do
   create_table "cat_item_preferences", force: :cascade do |t|
     t.integer "cat_id", null: false
     t.integer "item_id", null: false
@@ -29,6 +29,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_28_020402) do
     t.integer "room_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "status", default: 0
     t.index ["room_id"], name: "index_cats_on_room_id"
   end
 
