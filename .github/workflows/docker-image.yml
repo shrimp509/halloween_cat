@@ -1,0 +1,27 @@
+name: Docker Image CI
+
+on:
+  push:
+    tags: [ "v*" ]
+  pull_request:
+    branches: [ "master" ]
+
+env:
+  DOCKER_USER: ${{ secrets.DOCKER_USER }}
+  DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+  RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
+
+jobs:
+  build-n-push:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Login to Dockerhub
+      run: |
+        docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --build-arg RAILS_ENV=production --build-arg RAILS_MASTER_KEY=$RAILS_MASTER_KEY --tag $DOCKER_USER/halloween-cat:production
+    - name: Push to Dockerhub
+      run: docker push $DOCKER_USER/halloween-cat:production
