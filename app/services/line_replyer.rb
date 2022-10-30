@@ -54,7 +54,7 @@ class LineReplyer
         8. /work (工作名字): 開始工作了奴才，我要吃罐罐！
         9. /rank: 查詢積分排行榜
         10. /restart: 只有貓死了才能重新養一隻
-        11. /storage: 可查看食物和玩具庫存（玩具每次使用，都有 10% 機率毀損）
+        11. /storage: 可查看食物和玩具庫存
         12. /rename: 替主子取名字
         '''.strip.gsub("        ", '')
       when 'stat'
