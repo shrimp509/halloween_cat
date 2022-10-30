@@ -9,11 +9,8 @@ class LineReplyer
         replied = case event['type']
                   when 'join', 'follow'
                     Room.create(line_id: room_id)
-                    puts("JOIN or FOLLOW")
-                    helper.pack_text_msg("遊戲規則：")
                   when 'unfollow', 'leave'
                     Room.find_by(line_id: room_id)&.destroy
-                    puts("UNFOLLOW or LEAVE")
                   when 'message'
                     @room = Room.find_by(line_id: room_id)
                     @cat = @room.cat
