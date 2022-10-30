@@ -9,6 +9,7 @@ class LineReplyer
         replied = case event['type']
                   when 'join', 'follow'
                     Room.create(line_id: room_id)
+                    helper.pack_text_msg("建議玩法：先幫你的貓貓取個好名字(/rename) -> 打工賺點錢錢(/work) -> 買各種食物和玩具測試喜好(/shop or /buy) -> 拿高分(/rank)")
                   when 'unfollow', 'leave'
                     Room.find_by(line_id: room_id)&.destroy
                   when 'message'
