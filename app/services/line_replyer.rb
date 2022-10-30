@@ -104,13 +104,31 @@ class LineReplyer
         @cat.trustiness += food_effect['trustiness']
         @cat.healthiness += food_effect['healthiness']
         @cat.save
-        item_preference ? '還不錯' : '...'
+        @room.increment!(:score, food_effect['score'])
+        @item.decrement!(:count)
+        item_preference ? 'ヽ(=^･ω･^=)丿' : '( Φ ω Φ )'
+      when 'play'
+        return "#{@cat.name} 已受不了而離家出走，在你的世界裡消失，考慮 /restart 重養一隻？" if @cat.leave?
+        return "沒有這種東西哦，你是不是想壞壞 -`д´-" unless @room.items.pluck(:name).include?(option)
+        @item = @room.items.find_by(name: option)
+        return "這東西不是用來用的... 可憐的人類(´･_･`)" unless @item.item_type == 'toy'
+        return "你們的 #{option} 數量不夠，殘念爹斯 (´ー`)" if @item.count <= 0
+        item_preference = @cat.cat_item_preferences.find_by(item: @item).like
+        key = item_preference ? 'like' : 'dont-like'
+        toy_effect = Item.get_attr(option)&.dig('effect', key)
+        @cat.saturation += toy_effect['saturation']
+        @cat.trustiness += toy_effect['trustiness']
+        @cat.healthiness += toy_effect['healthiness']
+        @cat.save
+        @room.increment!(:score, toy_effect['score'])
+        @item.decrement!(:count)
+        item_preference ? 'ヽ(=^･ω･^=)丿' : '( Φ ω Φ )'
       when 'shop'
         items = Item.all_items.map do |item| 
           sliced_item = item.slice('name', 'price', 'introduction', 'item_type')
           "#{sliced_item['item_type'] == 'food' ? '🍖' : '🧸'} *#{sliced_item['name']}* : #{sliced_item['price']} 元\n#{sliced_item['introduction']}"
         end
-        "歡迎光臨貓貓商店～\n`購買範例：/store 罐罐`\n購買前請先確認錢錢餘額夠不夠哦～\n\n" + items.join("\n\n")
+        "歡迎光臨貓貓商店～\n`購買範例：/buy 罐罐`\n購買前請先確認錢錢餘額夠不夠哦～\n\n" + items.join("\n\n")
       when 'buy'
         return "請輸入購買項目" if option.nil?
         item_attr = Item.get_attr(option)
@@ -124,7 +142,7 @@ class LineReplyer
         works = WorksGetter.all
         if option.nil? || option.blank?
           result = works.map do |work|
-            "🐶 *#{work['name']}* 可以賺 #{work['can_earn']}"
+            "🐶 *#{work['name']}* 可以賺 #{work['can_earn']} 元"
           end
           return "工作清單：\n\n"+ result.join("\n")
         end
