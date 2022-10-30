@@ -103,6 +103,8 @@ class LineReplyer
         @cat.save
         @room.increment!(:score, food_effect['score'])
         @item.decrement!(:count)
+        @cat.leave! if @cat.healthiness < 0 || @cat.trustiness < 0 || @cat.saturation < 0
+        return "#{@cat.name} 已受不了而離家出走，在你的世界裡消失，考慮 /restart 重養一隻？" if @cat.leave?
         item_preference ? 'ヽ(=^･ω･^=)丿' : '( Φ ω Φ )'
       when 'play'
         return "#{@cat.name} 已受不了而離家出走，在你的世界裡消失，考慮 /restart 重養一隻？" if @cat.leave?
@@ -119,6 +121,8 @@ class LineReplyer
         @cat.save
         @room.increment!(:score, toy_effect['score'])
         @item.decrement!(:count)
+        @cat.leave! if @cat.healthiness < 0 || @cat.trustiness < 0 || @cat.saturation < 0
+        return "#{@cat.name} 已受不了而離家出走，在你的世界裡消失，考慮 /restart 重養一隻？" if @cat.leave?
         item_preference ? 'ヽ(=^･ω･^=)丿' : '( Φ ω Φ )'
       when 'shop'
         items = Item.all_items.map do |item| 
@@ -154,7 +158,7 @@ class LineReplyer
         end
         "風雲榜：\n\n" + "#{ranking_result.join("\n")}"
       when 'restart'
-        return "#{@cat.name} 還健康得很，請好好服侍牠" unless @cat.healthiness < 0
+        return "*#{@cat.name}*: 朕還好得很，服侍朕到老死吧，奴才！" unless @cat.leave?
         room_id = @room.line_id
         @room.destroy
         new_room = Room.create(line_id: room_id)

@@ -11,6 +11,11 @@ class CatConsumptionJob < ApplicationJob
       LinePusher.push_message(cat.room.line_id, "*#{cat.name}* : " + say_by_saturation(cat.saturation))
     end
 
+    if cat.healthiness < 0 || cat.trustiness < 0 || cat.saturation < 0
+      cat.leave!
+      LinePusher.push_message(cat.room.line_id, "#{@cat.name} 已受不了而離家出走，在你的世界裡消失，考慮 /restart 重養一隻？")
+    end
+
     CatConsumptionJob.set(wait_until: random_number(5, 20).minutes.from_now).perform_later(cat)
   end
 
