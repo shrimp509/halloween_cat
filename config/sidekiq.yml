@@ -1,3 +1,0 @@
-:max_retries: 2
-:queues:
-  - default_queue

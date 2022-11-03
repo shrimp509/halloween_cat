@@ -1,6 +1,17 @@
 class CatConsumptionJob < ApplicationJob
   queue_as :default
 
+  MAX_RETRIES = 2
+  
+  def serialize
+    super.merge('attempt_number' => (@attempt_number || 0) + 1)
+  end
+
+  def deserialize(job_data)
+    super
+    @attempt_number = job_data['attempt_number']
+  end
+
   def perform(cat)
     return if cat.nil? || !cat.is_a?(Cat) || cat.leave?
 
@@ -17,6 +28,8 @@ class CatConsumptionJob < ApplicationJob
     end
 
     CatConsumptionJob.set(wait_until: random_number(5, 20).minutes.from_now).perform_later(cat)
+  rescue => e
+    retry_job(wait: 10) if @attempt_number < MAX_RETRIES
   end
 
   private
